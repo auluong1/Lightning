@@ -10,18 +10,15 @@ void setup()
 }
 void draw()
 {
-  int color = (int)(Math.random() * 9);
-  stroke(color, color, color);
-  while(true) {
-    if(endX > 300) {
-      break;
-    }
-    endX = startX + (int)(Math.random() * 9);
-    endY = startY + (int)(Math.random() * 18) - 9;
-    line(startX, startY, endX, endY);
-    startX = endX;
-    startY = endY;
-  }
+  int colors1 = (int)(Math.random() * 225);
+  int colors2 = (int)(Math.random() * 225);
+  int colors3 = (int)(Math.random() * 225);
+  stroke(colors1, colors2, colors3);
+  endX = startX + (int)(Math.random() * 9);
+  endY = startY + (int)(Math.random() * 18) - 9;
+  line(startX, startY, endX, endY);
+  startX = endX;
+  startY = endY;
 }
 void mousePressed()
 {
